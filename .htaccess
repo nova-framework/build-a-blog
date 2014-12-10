@@ -1,0 +1,16 @@
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On
+  RewriteBase /
+  
+  #comment out to keep trailing slashes
+  RewriteRule ^(.+)/$ $1 [R=307,L]
+  
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  
+  RewriteRule ^(.*)$ index.php?$1 [QSA,L]
+
+</IfModule>
