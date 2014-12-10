@@ -9,6 +9,11 @@ class Cats extends \core\controller {
 	private $_model;
 
 	function __construct(){
+		
+		if(!Session::get('loggedin')){
+			Url::redirect('admin/login');
+		}
+		
 		$this->_model = new \models\admin\cats();
 	}
 
