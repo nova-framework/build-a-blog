@@ -10,6 +10,11 @@ class Posts extends \core\controller {
 	private $_catsmodel;
 
 	function __construct(){
+		
+		if(!Session::get('loggedin')){
+			Url::redirect('admin/login');
+		}
+		
 		$this->_model = new \models\admin\posts();
 		$this->_catsmodel = new \models\admin\cats();
 	}
