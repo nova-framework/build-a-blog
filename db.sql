@@ -39,7 +39,7 @@ LOCK TABLES `dc_members` WRITE;
 
 INSERT INTO `dc_members` (`memberID`, `username`, `password`, `email`, `addedDate`)
 VALUES
-	(1,'Demo','$2y$12$UwWuRhQtfROz4/mzbfgY.Oas5tReZrQK187iVEA77LMkW/9HIhMsS','dave@daveismyname.com','2014-12-08 19:07:19');
+	(1,'Demo','$2y$12$UwWuRhQtfROz4/mzbfgY.Oas5tReZrQK187iVEA77LMkW/9HIhMsS','demo@demo.com','2014-12-08 19:07:19');
 
 /*!40000 ALTER TABLE `dc_members` ENABLE KEYS */;
 UNLOCK TABLES;
